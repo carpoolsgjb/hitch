@@ -159,7 +159,7 @@
             max-width: 90%;
         }
     }
-</style>
+  </style>
 </head>
 <body>
   <div class="main-container">
@@ -213,8 +213,6 @@
         if (file) {
           const formData = new FormData();
           formData.append("receipt", file);
-
-          // Append form details
           formData.append("Travel Date", document.getElementById("selectedDate").textContent);
           formData.append("Customer Name", document.getElementById("passengerName").textContent);
           formData.append("Contact Number", document.getElementById("contactNumber").textContent);
@@ -275,7 +273,6 @@
       document.getElementById("totalAmount").textContent = `${symbol}${parseFloat(urlParams.get("F12_Amount") || "0").toFixed(2)}`;
 
       if (currency === "MYR") {
-        document.getElementById("paynowSection").style.display = "none";
         document.getElementById("myrButtonContainer").style.display = "flex";
       }
     });
